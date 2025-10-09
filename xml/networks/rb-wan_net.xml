@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<network>
+  <name>rb-wan</name>
+  <bridge name="br-rc2-rb" />
+  <ip address="10.3.0.2" netmask="255.255.255.252">
+    <dhcp>
+      <host mac="52:54:00:13:00:01" name="rc2-if-rb" ip="10.3.0.1" />
+      <host mac="52:54:00:13:00:02" name="rb-wan" ip="10.3.0.2" />
+    </dhcp>
+  </ip>
+</network>

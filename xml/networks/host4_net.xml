@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<network>
+  <name>host4</name>
+  <bridge name="br-red4" />
+  <ip address="10.0.4.2" netmask="255.255.255.0">
+    <dhcp>
+      <host mac="52:54:00:04:04:01" name="rb-if-red4" ip="10.0.4.1" />
+      <host mac="52:54:00:04:04:02" name="host4" ip="10.0.4.2" />
+    </dhcp>
+  </ip>
+</network>
