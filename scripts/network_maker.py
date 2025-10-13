@@ -32,7 +32,7 @@ def generateXML(name, bridge, address, mask, macs, names, ips):
     xml_str = ET.tostring(root, encoding="unicode")
     
     tree.write(output_path, encoding="utf-8", xml_declaration=True)
-    subprocess.run([script_path, bridge])
+    #subprocess.run([script_path, bridge])
 
 subprocess.run(["chmod", "+x", script_path])
 for nodo, info in topology.redes.items():
@@ -42,8 +42,10 @@ for nodo, info in topology.redes.items():
     network = ipaddress.ip_network(info["network"])
     ip = str(network.network_address)
     mask = str(network.netmask)
+    
+    subprocess.run([script_path, bridge])
 
-    macs = []
+    """macs = []
     names = []
     ips = []
     for host in info["hosts"]:
@@ -56,7 +58,7 @@ for nodo, info in topology.redes.items():
         ips.append(ip)
 
     generateXML(name, bridge, ip, mask, macs, names, ips)
-
+    """
 
 
 

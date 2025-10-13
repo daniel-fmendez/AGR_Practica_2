@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <domain type="kvm">
   <name>rb</name>
-  <uuid>783636a6-9e5c-45f5-aa80-f61b1f1dda53</uuid>
+  <uuid>1a5518e6-4b4d-46e5-b3b6-63073f646ffd</uuid>
   <memory>1048576</memory>
   <currentMemory>1048576</currentMemory>
   <vcpu>2</vcpu>
@@ -22,7 +22,7 @@
     <emulator>/usr/bin/kvm</emulator>
     <disk type="file" device="disk">
       <driver name="qemu" type="qcow2" />
-      <source file="/home/daniel/Documents/AGR/img/rb.qcow2" />
+      <source file="/home/daniel/Documents/AGR_Practica_2/img/rb.qcow2" />
       <target dev="vda" bus="virtio" />
     </disk>
     <serial type="pty">

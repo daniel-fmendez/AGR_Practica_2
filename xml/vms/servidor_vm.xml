@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <domain type="kvm">
   <name>servidor</name>
-  <uuid>459bc0ce-a3cf-43bf-af2b-7251a0079752</uuid>
+  <uuid>5f5d028e-6bce-47ac-a60c-ee6968bf10e8</uuid>
   <memory>1048576</memory>
   <currentMemory>1048576</currentMemory>
   <vcpu>2</vcpu>
@@ -22,7 +22,7 @@
     <emulator>/usr/bin/kvm</emulator>
     <disk type="file" device="disk">
       <driver name="qemu" type="qcow2" />
-      <source file="/home/daniel/Documents/AGR/img/servidor.qcow2" />
+      <source file="/home/daniel/Documents/AGR_Practica_2/img/servidor.qcow2" />
       <target dev="vda" bus="virtio" />
     </disk>
     <serial type="pty">

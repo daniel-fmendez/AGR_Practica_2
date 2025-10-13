@@ -5,8 +5,9 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-mkdir -p xml/networks
+# mkdir -p xml/networks
 mkdir -p xml/vms
+mkdir -p xml/networks
 mkdir -p img
 
 python3 ./scripts/network_maker.py

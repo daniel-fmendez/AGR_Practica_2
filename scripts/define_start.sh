@@ -1,24 +1,17 @@
 #!/bin/bash
 
 SCRIPT_DIR=$(dirname "$(realpath "$0")")
-# Networks
-for n in $(virsh net-list --all --name | grep -v default); do
-    virsh net-destroy "$n" 2>/dev/null
-    virsh net-undefine "$n" 2>/dev/null
-done
 
-for network in "$SCRIPT_DIR/../xml/networks/"*; do
+: 'for network in "$SCRIPT_DIR/../xml/networks/"*; do
     net_name=$(xmllint --xpath "string(//name)" "$network")
-    
-    # Crear y arrancar la red de forma NO persistente
-    if ! virsh net-info "$net_name" &>/dev/null; then
-        virsh net-create "$network"
-    fi
+    echo " - Creando red: $net_name"
+    virsh net-create "$network"
 done
 
-echo "Defined networks"
-virsh net-list --all
-
+echo
+echo "Redes activas actualmente:"
+virsh net-list
+'
 # VM
 for vm in "$SCRIPT_DIR/../xml/vms/"*; do
     vm_name=$(xmllint --xpath "string(//name)" "$vm")
