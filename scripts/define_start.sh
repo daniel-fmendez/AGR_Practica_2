@@ -15,7 +15,26 @@ virsh net-list
 # VM
 for vm in "$SCRIPT_DIR/../xml/vms/"*; do
     vm_name=$(xmllint --xpath "string(//name)" "$vm")
-    virsh create "$vm"
+    echo "$vm"
+    virsh define "$vm"
+done
+
+for img in "$SCRIPT_DIR/../img/"*; do
+    filename=$(basename "$img")
+
+    img_name="${filename%.qcow2}"
+
+    interface="$SCRIPT_DIR/../config/interfaces/interfaces_$img_name"
+    cp "$interface" "$SCRIPT_DIR/../config/interfaces/interfaces"
+    tmp_if="$SCRIPT_DIR/../config/interfaces/interfaces"
+
+    virt-copy-in -a $img $tmp_if /etc/network/
+done
+
+for vm in "$SCRIPT_DIR/../xml/vms/"*; do
+    vm_name=$(xmllint --xpath "string(//name)" "$vm")
+    echo "$vm"
+    virsh start "$vm_name"
 done
 
 echo "Defined VM":

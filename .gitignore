@@ -1,2 +1,5 @@
 *.qcow2
 
+./img
+./xml
+./config

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <domain type="kvm">
   <name>servidor</name>
-  <uuid>5f5d028e-6bce-47ac-a60c-ee6968bf10e8</uuid>
+  <uuid>dbeb840c-d4ed-4ac6-bdb6-8d654fa3b9ad</uuid>
   <memory>1048576</memory>
   <currentMemory>1048576</currentMemory>
   <vcpu>2</vcpu>

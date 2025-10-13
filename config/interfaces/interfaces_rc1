@@ -1,0 +1,18 @@
+
+auto lo
+iface lo inet static
+
+
+auto eth0
+iface eth0 inet static
+    address 10.100.0.1
+    netmask 255.255.255.252
+    gateway 10.100.0.2
+
+
+auto eth1
+iface eth1 inet static
+    address 10.1.0.1
+    netmask 255.255.255.252
+    gateway 10.1.0.2
+
