@@ -1,5 +1,5 @@
 *.qcow2
 
-./img
-./xml
-./config
+img/
+xml/
+config/
