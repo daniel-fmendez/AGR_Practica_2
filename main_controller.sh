@@ -10,8 +10,11 @@ mkdir -p xml/vms
 mkdir -p xml/networks
 mkdir -p img
 mkdir -p config/interfaces
+mkdir -p config/scripts
 
 python3 ./scripts/network_maker.py
 python3 ./scripts/interfaces_maker.py
 python3 ./scripts/vm_maker.py
+python3 ./scripts/routes_maker.py
+
 sh ./scripts/define_start.sh

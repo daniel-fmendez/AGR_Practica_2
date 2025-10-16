@@ -29,6 +29,12 @@ for img in "$SCRIPT_DIR/../img/"*; do
     tmp_if="$SCRIPT_DIR/../config/interfaces/interfaces"
 
     virt-copy-in -a $img $tmp_if /etc/network/
+
+    routes="$SCRIPT_DIR/../config/scripts/start_routes_$img_name"
+    cp "$routes" "$SCRIPT_DIR/../config/scripts/start_routes.sh"
+    tmp_routes="$SCRIPT_DIR/../config/scripts/start_routes.sh"
+
+    virt-copy-in -a $img $tmp_routes /home/ubuntu/boot_config
 done
 
 for vm in "$SCRIPT_DIR/../xml/vms/"*; do

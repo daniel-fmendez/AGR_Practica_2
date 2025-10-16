@@ -1,7 +1,5 @@
 import os
 import topology
-import subprocess
-
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 out_dir = os.path.normpath(os.path.join(BASE_DIR, "..", "config", "interfaces"))
