@@ -18,12 +18,21 @@ for nodo, info in topology.config.items():
         if_netmask = interface["netmask"]
         if_gateway = interface["gateway"]
 
-        interface_string = f"""
+        if len(if_gateway)>0:
+            interface_string = f"""
 auto {if_if}
 iface {if_if} inet static
     address {if_address}
     netmask {if_netmask}
     gateway {if_gateway}
+
+"""
+        else:
+            interface_string = f"""
+auto {if_if}
+iface {if_if} inet static
+    address {if_address}
+    netmask {if_netmask}
 
 """
         result_string += interface_string

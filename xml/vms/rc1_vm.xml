@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <domain type="kvm">
   <name>rc1</name>
-  <uuid>fef12136-7887-4d06-aa11-db403984f205</uuid>
+  <uuid>c7c36fc1-24fc-4b76-a492-dad88e55377e</uuid>
   <memory>1048576</memory>
   <currentMemory>1048576</currentMemory>
   <vcpu>2</vcpu>

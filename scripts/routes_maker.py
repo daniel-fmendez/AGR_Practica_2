@@ -13,8 +13,9 @@ for nodo, info in topology.config.items():
             rout_dest = route["dest"]
             rout_next = route["next"]
 
-            command_line = f"ip route ${rout_dest} ${rout_next}\n"
+            command_line = f"ip route add {rout_dest} via {rout_next}\n"
             text_file.write(command_line)
 
+        
        
             
