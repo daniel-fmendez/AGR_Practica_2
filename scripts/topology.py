@@ -31,7 +31,7 @@ config = {
         ],
         "routing": [
             {
-                "dest" : "0.0.0.0/0",
+                "dest" : "default",
                 "next" : "10.1.0.2"
             }
         ]
@@ -78,7 +78,7 @@ config = {
                 "next" : "10.3.0.2"
             },
             {
-                "dest" : "0.0.0.0/0",
+                "dest" : "default",
                 "next" : "10.1.0.1"
             }
         ]
@@ -109,7 +109,7 @@ config = {
         ],
         "routing": [
             {
-                "dest" : "0.0.0.0/0",
+                "dest" : "default",
                 "next" : "10.2.0.1"
             }
         ]
@@ -140,7 +140,7 @@ config = {
         ],
         "routing": [
             {
-                "dest" : "0.0.0.0/0",
+                "dest" : "default",
                 "next" : "10.3.0.1"
             }
         ]
