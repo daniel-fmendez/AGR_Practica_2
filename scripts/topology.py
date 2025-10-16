@@ -26,7 +26,7 @@ config = {
             "bridge": "br-rc1-rc2",
             "address": "10.1.0.1",
             "netmask": "255.255.255.252",
-            "gateway": "10.1.0.2"
+            "gateway": ""
             }
         ],
         "routing": [
@@ -50,14 +50,14 @@ config = {
             "bridge": "br-rc1-rc2",
             "address": "10.2.0.1",
             "netmask": "255.255.255.252",
-            "gateway": "10.1.0.1"
+            "gateway": ""
             },
             {
             "if": "eth2",
             "bridge": "br-rc1-rc2",
             "address": "10.3.0.1",
             "netmask": "255.255.255.252",
-            "gateway": "10.1.0.1"
+            "gateway": ""
             }
         ],
         "routing": [
@@ -97,14 +97,14 @@ config = {
             "bridge": "br-rc1-rc2",
             "address": "10.0.1.1",
             "netmask": "255.255.255.0",
-            "gateway": "10.2.0.1"
+            "gateway": ""
             },
             {
             "if": "eth2",
             "bridge": "br-rc1-rc2",
             "address": "10.0.2.1",
             "netmask": "255.255.255.0",
-            "gateway": "10.2.0.1"
+            "gateway": ""
             }
         ],
         "routing": [
@@ -128,14 +128,14 @@ config = {
             "bridge": "br-rc1-rc2",
             "address": "10.0.3.1",
             "netmask": "255.255.255.0",
-            "gateway": "10.3.0.1"
+            "gateway": ""
             },
             {
             "if": "eth2",
             "bridge": "br-rc1-rc2",
             "address": "10.0.4.1",
             "netmask": "255.255.255.0",
-            "gateway": "10.3.0.1"
+            "gateway": ""
             }
         ],
         "routing": [
