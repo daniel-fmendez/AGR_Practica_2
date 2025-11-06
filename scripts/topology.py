@@ -18,7 +18,7 @@ config = {
             "if": "eth0",
             "bridge": "br-rc1-rc2",
             "address": "10.100.0.1",
-            "netmask": "255.255.255.252",
+            "netmask": "255.255.255.0",
             "gateway": "10.100.0.2"
             },
             {

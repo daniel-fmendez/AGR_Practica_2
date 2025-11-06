@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <domain type="kvm">
   <name>ra</name>
-  <uuid>4de6c86c-1f10-4ffd-80cd-8b5946be00f8</uuid>
+  <uuid>8f8e848b-1eb9-4087-887f-e24745190d67</uuid>
   <memory>1048576</memory>
   <currentMemory>1048576</currentMemory>
   <vcpu>2</vcpu>

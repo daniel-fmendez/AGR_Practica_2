@@ -18,23 +18,16 @@ for nodo, info in topology.config.items():
         if_netmask = interface["netmask"]
         if_gateway = interface["gateway"]
 
-        if len(if_gateway)>0:
-            interface_string = f"""
+        interface_string = f"""
 auto {if_if}
 iface {if_if} inet static
     address {if_address}
     netmask {if_netmask}
-    gateway {if_gateway}
-
-"""
-        else:
-            interface_string = f"""
-auto {if_if}
-iface {if_if} inet static
-    address {if_address}
-    netmask {if_netmask}
-
-"""
+"""   
+        if any(name in nodo for name in ["host","servidor"]):
+            interface_string+=f"    gateway {if_gateway}"
+        
+        interface_string+="\n"
         result_string += interface_string
 
     file_name = f"interfaces_{nodo}"
