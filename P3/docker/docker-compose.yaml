@@ -1,0 +1,310 @@
+version: '3'
+services:
+  #to add a new router copy and paste this configuration. Define its ip address and assign a network consistenlty with the architecture required
+  
+  fluentd:
+    build: 
+      context: ./fluentd
+      dockerfile: Dockerfile_fluentd
+    privileged: true
+    #the container as first instruction executes the entrypoint (since the image doesn't support bash it's used sh)
+    entrypoint: sh -c "/ep_fluentd.sh"
+    #shared-volumes between fluentd and the host
+    volumes:
+      - ./fluentd/conf/fluent.conf:/fluentd/etc/fluent.conf 
+      - ./fluentd/shared-volume:/shared-volume
+      - ./fluentd/output:/fluentd/output/
+    #hostPort:containerPort
+    #indicates a connection between these 2 ports but it works also without this block
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+      - "5140/tcp"
+    command: 
+      - "/bin/sleep"
+      - "infinity"
+    networks:
+      redC1S:
+        ipv4_address: 10.100.0.3
+  
+  
+  rc1:
+    hostname: rc1
+    build: 
+      context: ./router
+      dockerfile: Dockerfile_router
+    #the container as first instruction executes the entrypoint
+    entrypoint: entrypoints/ep_rc1.sh
+    #set the network and system priviledges high to make it possible to add static route and set the flag for forwarding to 1. Done for all the containers in this primal phase.
+    cap_add:
+      - NET_ADMIN
+    privileged: true
+    #shared-volumes between fluentd and the host
+    volumes:
+      - ./fluentd/shared-volume:/shared-volume
+    #Started after fluentd (that should collect all the logs)
+    depends_on:
+      - fluentd
+    #links establishes a link to the fluentd service enabling communication with that container
+    links:
+      - fluentd
+    #set as logging driver fluentd (to check if it's actually needed)
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: 10.100.0.3:24224
+        tag: rc1
+        #makes the execution non-blocking
+        fluentd-async: 'true'
+    #put the container in a loop in order to access it with bash
+    command: 
+      - "/bin/sleep"
+      - "infinity"
+    networks:
+      redC1S:
+        ipv4_address: 10.100.0.1
+      redC1C2:
+        ipv4_address: 10.1.0.1    
+    
+
+  rc2:
+    hostname: rc2
+    build: 
+      context: ./router
+      dockerfile: Dockerfile_router
+    #the container as first instruction executes the entrypoint
+    entrypoint: entrypoints/ep_rc2.sh
+    #set the network and system priviledges high to make it possible to add static route and set the flag for forwarding to 1. Done for all the containers in this primal phase.
+    cap_add:
+      - NET_ADMIN
+    privileged: true
+    #shared-volumes between fluentd and the host
+    volumes:
+      - ./fluentd/shared-volume:/shared-volume
+    #Started after fluentd (that should collect all the logs)
+    depends_on:
+      - fluentd
+    #links establishes a link to the fluentd service enabling communication with that container
+    links:
+      - fluentd
+    #set as logging driver fluentd (to check if it's actually needed)
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: 10.100.0.3:24224
+        tag: rc2
+        #makes the execution non-blocking
+        fluentd-async: 'true'
+    #put the container in a loop in order to access it with bash
+    command: 
+      - "/bin/sleep"
+      - "infinity"
+    networks:
+      redC1C2:
+        ipv4_address: 10.1.0.2
+      redC2A:
+        ipv4_address: 10.2.0.1
+      redC2B:
+        ipv4_address: 10.3.0.1
+
+  ra:
+    hostname: ra
+    build: 
+      context: ./router
+      dockerfile: Dockerfile_router
+    #the container as first instruction executes the entrypoint
+    entrypoint: entrypoints/ep_ra.sh
+    #set the network and system priviledges high to make it possible to add static route and set the flag for forwarding to 1. Done for all the containers in this primal phase.
+    cap_add:
+      - NET_ADMIN
+    privileged: true
+    #shared-volumes between fluentd and the host
+    volumes:
+      - ./fluentd/shared-volume:/shared-volume
+    #Started after fluentd (that should collect all the logs)
+    depends_on:
+      - fluentd
+    #links establishes a link to the fluentd service enabling communication with that container
+    links:
+      - fluentd
+    #set as logging driver fluentd (to check if it's actually needed)
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: 10.100.0.3:24224
+        tag: ra
+        #makes the execution non-blocking
+        fluentd-async: 'true'
+    #put the container in a loop in order to access it with bash
+    command: 
+      - "/bin/sleep"
+      - "infinity"
+    networks:
+      redC2A:
+        ipv4_address: 10.2.0.2
+      red1:
+        ipv4_address: 10.0.1.1
+      red2:
+        ipv4_address: 10.0.2.1
+
+  rb:
+    hostname: rb
+    build: 
+      context: ./router
+      dockerfile: Dockerfile_router
+    #the container as first instruction executes the entrypoint
+    entrypoint: entrypoints/ep_rb.sh
+    #set the network and system priviledges high to make it possible to add static route and set the flag for forwarding to 1. Done for all the containers in this primal phase.
+    cap_add:
+      - NET_ADMIN
+    privileged: true
+    #shared-volumes between fluentd and the host
+    volumes:
+      - ./fluentd/shared-volume:/shared-volume
+    #Started after fluentd (that should collect all the logs)
+    depends_on:
+      - fluentd
+    #links establishes a link to the fluentd service enabling communication with that container
+    links:
+      - fluentd
+    #set as logging driver fluentd (to check if it's actually needed)
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: 10.100.0.3:24224
+        tag: rb
+        #makes the execution non-blocking
+        fluentd-async: 'true'
+    #put the container in a loop in order to access it with bash
+    command: 
+      - "/bin/sleep"
+      - "infinity"
+    networks:
+      redC2B:
+        ipv4_address: 10.3.0.2
+      red3:
+        ipv4_address: 10.0.3.1
+      red4:
+        ipv4_address: 10.0.4.1
+
+  client1:
+    hostname: c1
+    build: 
+      context: ./client
+      dockerfile: Dockerfile_client
+    #privedges for network needed to add a new ip route
+    cap_add:
+      - NET_ADMIN
+    #put the container in a loop in order to access it with bash
+    command: 
+      - "/bin/sleep"
+      - "infinity"  
+    networks:
+      red1:
+        ipv4_address: 10.0.1.2
+
+  client2:
+    hostname: c2
+    build: 
+      context: ./client
+      dockerfile: Dockerfile_client
+    #privedges for network needed to add a new ip route
+    cap_add:
+      - NET_ADMIN
+    #put the container in a loop in order to access it with bash
+    command: 
+      - "/bin/sleep"
+      - "infinity"  
+    networks:
+      red2:
+        ipv4_address: 10.0.2.2
+  
+  client3:
+    hostname: c3
+    build: 
+      context: ./client
+      dockerfile: Dockerfile_client
+    #privedges for network needed to add a new ip route
+    cap_add:
+      - NET_ADMIN
+    #put the container in a loop in order to access it with bash
+    command: 
+      - "/bin/sleep"
+      - "infinity"  
+    networks:
+      red3:
+        ipv4_address: 10.0.3.2
+  
+  client4:
+    hostname: c4
+    build: 
+      context: ./client
+      dockerfile: Dockerfile_client
+    #privedges for network needed to add a new ip route
+    cap_add:
+      - NET_ADMIN
+    #put the container in a loop in order to access it with bash
+    command: 
+      - "/bin/sleep"
+      - "infinity"  
+    networks:
+      red4:
+        ipv4_address: 10.0.4.2
+
+  server_:
+    image: ubuntu:22.04
+    #put the container in a loop in order to access it with bash
+    command:
+      #- "ip route add 172.16.1.0/24 via 172.16.0.2" 
+      - "/bin/sleep"
+      - "infinity"
+    cap_add:
+      - NET_ADMIN
+    #privileged: true
+    networks:
+      redC1S:
+        ipv4_address: 10.100.0.10
+  
+  
+
+networks:
+  red1:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.1.0/24
+  red2:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.2.0/24
+  red3:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.3.0/24
+  red4:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.0.4.0/24
+  redC2A:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.2.0.0/30
+  redC2B:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.3.0.0/30
+  redC1C2:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.1.0.0/30
+  redC1S:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.100.0.0/24
