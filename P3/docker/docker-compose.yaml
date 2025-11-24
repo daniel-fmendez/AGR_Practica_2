@@ -62,9 +62,9 @@ services:
       - "infinity"
     networks:
       redC1S:
-        ipv4_address: 10.100.0.1
+        ipv4_address: 10.100.0.50
       redC1C2:
-        ipv4_address: 10.1.0.1    
+        ipv4_address: 10.1.0.1
     
 
   rc2:
@@ -143,9 +143,9 @@ services:
       redC2A:
         ipv4_address: 10.2.0.2
       red1:
-        ipv4_address: 10.0.1.1
+        ipv4_address: 10.0.1.3
       red2:
-        ipv4_address: 10.0.2.1
+        ipv4_address: 10.0.2.3
 
   rb:
     hostname: rb
@@ -183,9 +183,9 @@ services:
       redC2B:
         ipv4_address: 10.3.0.2
       red3:
-        ipv4_address: 10.0.3.1
+        ipv4_address: 10.0.3.3
       red4:
-        ipv4_address: 10.0.4.1
+        ipv4_address: 10.0.4.3
 
   client1:
     hostname: c1

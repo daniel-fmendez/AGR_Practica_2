@@ -7,8 +7,7 @@ vtysh << EOF
 conf t
 log file /shared-volume/frr/frr1.log
 router ospf
-network 10.100.0.0/24 area 0
-network 10.1.0.0/30 area 0
+
 end
 EOF
 
