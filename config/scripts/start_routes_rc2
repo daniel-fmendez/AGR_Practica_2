@@ -1,0 +1,5 @@
+ip route add 10.0.1.0/24 via 10.2.0.2
+ip route add 10.0.2.0/24 via 10.2.0.2
+ip route add 10.0.3.0/24 via 10.3.0.2
+ip route add 10.0.4.0/24 via 10.3.0.2
+ip route add default via 10.1.0.1
