@@ -1,0 +1,31 @@
+================ HOST ================
+# Para la creacion del pod se ha utilizado:
+kubectl run pod1 --image=nginx:alpine --port=3000
+
+# Enlazamos el puerto 3000 del pod1 con el puerto 2040 del host
+kubectl port-forward pod1 2040:3000
+
+# En otra terminal entramos en el pod mediante sh
+kubectl exec -ti pod1 -- sh
+
+
+================ POD ================
+# Instalamos dependencias
+apk update
+apk add curl
+apk add git
+
+apk add nodejs-current --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+apk add npm --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main
+
+# Instalamos el servidor básico
+git clone https://github.com/Hsabaterl/agr.git
+cd agr/
+
+# Ejecutamos el servidor
+npm install express
+node app.js
+
+================ NAVEGADOR ================
+# Accedemos al servidor ejecutandose en el pod 
+http://localhost:2040/

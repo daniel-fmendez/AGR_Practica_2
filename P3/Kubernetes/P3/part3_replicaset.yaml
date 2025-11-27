@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: rs2
+  labels:
+    app: rs
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: server
+  template:
+    metadata:
+      labels:
+        app: server
+    spec:
+      containers:
+        - name: pod2
+          image: nginx:alpine
+          ports:
+            - containerPort: 3000
+        - name: pod3
+          image: nginx:alpine
+          ports:
+            - containerPort: 3001
+          command: ["nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf"]

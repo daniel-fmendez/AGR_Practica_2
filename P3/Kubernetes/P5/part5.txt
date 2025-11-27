@@ -1,0 +1,95 @@
+Estado tras la actualizacion 1:
+
+Name:                   deployment-p4
+Namespace:              default
+CreationTimestamp:      Thu, 27 Nov 2025 20:30:12 +0100
+Labels:                 <none>
+Annotations:            cambio: Actualizado de nginx:alpine a python:3.6-alpine
+                        deployment.kubernetes.io/revision: 3
+Selector:               app=p4
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=p4
+  Containers:
+   p4:
+    Image:      python:3.7-alpine
+    Port:       3000/TCP
+    Host Port:  0/TCP
+    Command:
+      sh
+      -c
+      while true; do echo running; sleep 30; done
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  deployment-p4-7b8ff4bdfc (0/0 replicas created), deployment-p4-6655b5d866 (0/0 replicas created)
+NewReplicaSet:   deployment-p4-64d7c974fc (3/3 replicas created)
+Events:
+  Type    Reason             Age              From                   Message
+  ----    ------             ----             ----                   -------
+  Normal  ScalingReplicaSet  6m22s            deployment-controller  Scaled up replica set deployment-p4-7b8ff4bdfc from 0 to 3
+  Normal  ScalingReplicaSet  6m13s            deployment-controller  Scaled up replica set deployment-p4-6655b5d866 from 0 to 1
+  Normal  ScalingReplicaSet  6m11s            deployment-controller  Scaled down replica set deployment-p4-7b8ff4bdfc from 3 to 2
+  Normal  ScalingReplicaSet  6m11s            deployment-controller  Scaled up replica set deployment-p4-6655b5d866 from 1 to 2
+  Normal  ScalingReplicaSet  6m10s            deployment-controller  Scaled down replica set deployment-p4-7b8ff4bdfc from 2 to 1
+  Normal  ScalingReplicaSet  6m10s            deployment-controller  Scaled up replica set deployment-p4-6655b5d866 from 2 to 3
+  Normal  ScalingReplicaSet  6m9s             deployment-controller  Scaled down replica set deployment-p4-7b8ff4bdfc from 1 to 0
+  Normal  ScalingReplicaSet  16s              deployment-controller  Scaled up replica set deployment-p4-64d7c974fc from 0 to 1
+  Normal  ScalingReplicaSet  9s               deployment-controller  Scaled down replica set deployment-p4-6655b5d866 from 3 to 2
+  Normal  ScalingReplicaSet  7s (x4 over 9s)  deployment-controller  (combined from similar events): Scaled down replica set deployment-p4-6655b5d866 from 1 to 0
+
+
+Estado tras la vuelta a nginx sin tocar el el yaml (mediante "kubectl rollout undo deployment deployment-p4 --to-revision=1"):
+
+Name:                   deployment-p4
+Namespace:              default
+CreationTimestamp:      Thu, 27 Nov 2025 20:30:12 +0100
+Labels:                 <none>
+Annotations:            deployment.kubernetes.io/revision: 4
+Selector:               app=p4
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=p4
+  Containers:
+   p4:
+    Image:         nginx:alpine
+    Port:          3000/TCP
+    Host Port:     0/TCP
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  deployment-p4-6655b5d866 (0/0 replicas created), deployment-p4-64d7c974fc (0/0 replicas created)
+NewReplicaSet:   deployment-p4-7b8ff4bdfc (3/3 replicas created)
+Events:
+  Type    Reason             Age                   From                   Message
+  ----    ------             ----                  ----                   -------
+  Normal  ScalingReplicaSet  10m                   deployment-controller  Scaled up replica set deployment-p4-7b8ff4bdfc from 0 to 3
+  Normal  ScalingReplicaSet  10m                   deployment-controller  Scaled up replica set deployment-p4-6655b5d866 from 0 to 1
+  Normal  ScalingReplicaSet  10m                   deployment-controller  Scaled down replica set deployment-p4-7b8ff4bdfc from 3 to 2
+  Normal  ScalingReplicaSet  10m                   deployment-controller  Scaled up replica set deployment-p4-6655b5d866 from 1 to 2
+  Normal  ScalingReplicaSet  10m                   deployment-controller  Scaled down replica set deployment-p4-7b8ff4bdfc from 2 to 1
+  Normal  ScalingReplicaSet  10m                   deployment-controller  Scaled up replica set deployment-p4-6655b5d866 from 2 to 3
+  Normal  ScalingReplicaSet  10m                   deployment-controller  Scaled down replica set deployment-p4-7b8ff4bdfc from 1 to 0
+  Normal  ScalingReplicaSet  4m22s                 deployment-controller  Scaled up replica set deployment-p4-64d7c974fc from 0 to 1
+  Normal  ScalingReplicaSet  4m15s                 deployment-controller  Scaled down replica set deployment-p4-6655b5d866 from 3 to 2
+  Normal  ScalingReplicaSet  22s (x10 over 4m15s)  deployment-controller  (combined from similar events): Scaled down replica set deployment-p4-64d7c974fc from 1 to 0

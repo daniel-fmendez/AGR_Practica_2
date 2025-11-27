@@ -1,0 +1,7 @@
+La actualizacion no ha sido correcta, aunque ambos pods se estan ejecutando, se mantiene el pod anterior que contiene la label que usa el replicaset.
+Esto ocasiona que tengamos dos pods pero 3 contenedores.
+
+Para solucionar esto hay dos opciones:
+    - Eliminar el replicaset antes de actualizarlo, o borrar el pod conflictivo y volver a aplicar el yaml.
+    - Se podria crear un Deployment, ya que va creando replicaset por cada nueva version.
+    
