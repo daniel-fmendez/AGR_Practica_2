@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rc1
+  labels:
+    rol: router
+  annotations:
+    k8s.v1.cni.cncf.io/networks: |
+      [ 
+        {
+          "name": "bridge-serv-rc1",
+          "interface": "eth1",
+          "ips": ["10.100.0.1/24"]
+        },
+        {
+          "name": "bridge-rc1-rc2",
+          "interface": "eth2",
+          "ips": ["10.1.0.1/30"]
+        }
+      ]
+spec:
+  containers:
+    - name: rc1
+      image: python:3.6-alpine
+      command: ["/bin/sh", "-c"]
+      args:
+        - |
+          sysctl -w net.ipv4.ip_forward=1;
+          iptables -F FORWARD;
+          iptables -P FORWARD ACCEPT;
+          iptables -A FORWARD -j ACCEPT;
+
+          ip route add 10.0.0.0/16 via 10.1.0.2
+
+          sleep infinity;
+      securityContext:
+        privileged: true
+        capabilities:
+          add:
+          - NET_ADMIN 

@@ -1,0 +1,19 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+metadata:
+  name: bridge-rc2-ra
+  namespace: default
+  labels:
+    rol: bridge
+spec:
+  config: |
+    {
+      "cniVersion": "0.3.1",
+      "name": "red-rc2-ra",
+      "type": "bridge",
+      "bridge": "bridge-rc2-ra",
+      "isGateway": false,
+      "ipam": {
+        "type": "static"
+      }
+    }

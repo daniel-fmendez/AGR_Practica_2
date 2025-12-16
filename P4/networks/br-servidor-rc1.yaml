@@ -1,0 +1,19 @@
+apiVersion: k8s.cni.cncf.io/v1
+kind: NetworkAttachmentDefinition
+metadata:
+  name: bridge-serv-rc1
+  namespace: default
+  labels:
+    rol: bridge
+spec:
+  config: |
+    {
+      "cniVersion": "0.3.1",
+      "name": "red-serv-rc1",
+      "type": "bridge",
+      "bridge": "bridge-serv-rc1",
+      "isGateway": false,
+      "ipam": {
+        "type": "static"
+      }
+    }

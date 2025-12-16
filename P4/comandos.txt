@@ -1,0 +1,14 @@
+# Pasos para correcta ejecución de esta practica
+1. Instalar minkube y kubectl
+2. Ejecutar p4_minkube.sh Arranca el servicio de minikube y copia de cni-plugins
+3. Lanzar la red virtualizada con launch.sh
+4. Completado
+
+# Para acceder al un pod:
+kubectl exec -it <POD> -- /bin/sh
+
+Ejem:
+kubectl exec -it host2 -- /bin/sh
+
+# Para obtener la respuesta del servidor
+wget -qO- http://10.100.0.10:3000
