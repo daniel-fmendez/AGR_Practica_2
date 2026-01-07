@@ -1,0 +1,48 @@
+Se ha anotado con: kubectl annotate deployment despliegue cambio="Actualizado de nginx:alpine a python:3.6-alpine
+
+Durante la actualizacion se han creado nuebas instancias de una en una, cuando se ejecutaba una correctament se creaba otra, asi hasta acabar.
+
+Name:                   deployment-p4
+Namespace:              default
+CreationTimestamp:      Thu, 27 Nov 2025 20:30:12 +0100
+Labels:                 <none>
+Annotations:            cambio: Actualizado de nginx:alpine a python:3.6-alpine
+                        deployment.kubernetes.io/revision: 2
+Selector:               app=p4
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=p4
+  Containers:
+   p4:
+    Image:      python:3.6-alpine
+    Port:       3000/TCP
+    Host Port:  0/TCP
+    Command:
+      sh
+      -c
+      while true; do echo running; sleep 30; done
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  deployment-p4-7b8ff4bdfc (0/0 replicas created)
+NewReplicaSet:   deployment-p4-6655b5d866 (3/3 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  3m10s  deployment-controller  Scaled up replica set deployment-p4-7b8ff4bdfc from 0 to 3
+  Normal  ScalingReplicaSet  3m1s   deployment-controller  Scaled up replica set deployment-p4-6655b5d866 from 0 to 1
+  Normal  ScalingReplicaSet  2m59s  deployment-controller  Scaled down replica set deployment-p4-7b8ff4bdfc from 3 to 2
+  Normal  ScalingReplicaSet  2m59s  deployment-controller  Scaled up replica set deployment-p4-6655b5d866 from 1 to 2
+  Normal  ScalingReplicaSet  2m58s  deployment-controller  Scaled down replica set deployment-p4-7b8ff4bdfc from 2 to 1
+  Normal  ScalingReplicaSet  2m58s  deployment-controller  Scaled up replica set deployment-p4-6655b5d866 from 2 to 3
+  Normal  ScalingReplicaSet  2m57s  deployment-controller  Scaled down replica set deployment-p4-7b8ff4bdfc from 1 to 0

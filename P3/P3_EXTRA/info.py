@@ -283,7 +283,7 @@ apt-get update
 apt-get install -y git curl
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="/root/.nvm"
 source $NVM_DIR/nvm.sh
 
 nvm install 22
@@ -291,6 +291,5 @@ git clone https://github.com/Hsabaterl/agr.git
 cd agr
 npm install express
 
-nohup node /root/agr/app.js >/root/app.log 2>&1 &
 '
 """

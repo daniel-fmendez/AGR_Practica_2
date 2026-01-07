@@ -34,7 +34,13 @@ apt-get update
 apt-get install -y curl
 '
 """
-
+server_node_up = """lxc-attach -n servidor -- bash -lc '
+export NVM_DIR="/root/.nvm"
+source "$NVM_DIR/nvm.sh"
+cd /agr
+setsid nohup node app.js >/root/app.log 2>&1 &
+'
+"""
 with open(template_path, encoding="utf-8") as f:
     template = f.read()
 
@@ -42,16 +48,17 @@ server_data = info.server_data
 for nodo, info in info.config.items():
     #Extra        
     extra = ""
+    routing = ""
+    network = ""
+
     if nodo == "servidor":
         extra = server_data
+        routing = server_node_up
     if nodo in ["ra", "rb", "rc1", "rc2"]:
         extra = router_text.format(name = nodo)
     if nodo in ["host1", "host2", "host3", "host4"]:
         extra = host_extra.format(name = nodo)
 
-    network = ""
-
-    routing = ""
     for count, interface in  enumerate(info["ifs"]):
         if_if = interface["if"]
         if_address = interface["address"]
