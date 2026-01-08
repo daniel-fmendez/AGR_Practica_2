@@ -1,4 +1,4 @@
-Se ha anotado con: kubectl annotate deployment despliegue cambio="Actualizado de nginx:alpine a python:3.6-alpine
+Se ha anotado con: kubectl annotate deployment deployment-p4 cambio="Actualizado de nginx:alpine a python:3.6-alpine
 
 Durante la actualizacion se han creado nuebas instancias de una en una, cuando se ejecutaba una correctament se creaba otra, asi hasta acabar.
 

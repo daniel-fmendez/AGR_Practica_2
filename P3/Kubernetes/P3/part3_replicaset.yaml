@@ -19,8 +19,3 @@ spec:
           image: nginx:alpine
           ports:
             - containerPort: 3000
-        - name: pod3
-          image: nginx:alpine
-          ports:
-            - containerPort: 3001
-          command: ["nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf"]
