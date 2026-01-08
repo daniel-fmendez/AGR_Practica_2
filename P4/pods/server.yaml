@@ -23,22 +23,18 @@ spec:
       command: ["/bin/sh", "-c"]
       args:
         - |
-          # 1. Instalar paquetes
+          #Instalar paquetes
           apk update
           apk add --no-cache git nodejs npm
-
-          # 2. Clonar y preparar
+          
           if [ -d /agr ]; then rm -rf /agr; fi;
           git clone https://github.com/Hsabaterl/agr.git /agr;
           cd /agr; 
           npm install express;
 
-          # 3. AHORA SÍ: Configuramos el gateway de tu laboratorio
-          # Esto hará que a partir de ahora el tráfico vaya por tu router
           ip route del default
           ip route add default via 10.100.0.1 dev eth1;
           
-          # 4. Ejecutar app
           node app.js;
       securityContext:
         privileged: true

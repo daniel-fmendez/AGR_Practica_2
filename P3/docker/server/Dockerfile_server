@@ -1,0 +1,33 @@
+FROM ubuntu:22.04
+
+RUN apt-get update
+RUN apt-get update && apt-get install -y  && apt-get install -y iproute2 iptables coreutils iputils-ping syslog-ng 
+ 
+RUN apt-get install -y python3-pip
+
+RUN apt-get install -y nodejs npm
+
+COPY ./server/package.json /app/package.json
+COPY ./server/server.js	/app/server.js	
+WORKDIR /app
+RUN npm install
+EXPOSE 3000 
+
+WORKDIR /
+
+RUN pip install numpy fluent-logger
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN ln -fs /usr/share/zoneinfo/Europe/Madrid /etc/localtime && \
+    echo "Europe/Madrid" > /etc/timezone && \
+    apt-get update && \
+    apt-get install -y tzdata && \
+    dpkg-reconfigure --frontend noninteractive tzdata
+
+COPY entrypoints/ep_servidor.sh entrypoints/ep_servidor.sh
+RUN chmod +x /entrypoints/ep_servidor.sh
+
+
+CMD ["/bin/bash"]
+
