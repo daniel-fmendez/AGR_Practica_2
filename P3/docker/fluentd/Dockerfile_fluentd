@@ -1,13 +1,18 @@
-# fluentd/Dockerfile
-
-FROM fluent/fluentd:v1.12-1
+FROM fluent/fluentd:v1.17.0-debian-amd64-1.0
 USER root
-RUN ["gem",  "install", "multi_json",  "-v",  "1.15.0"]
-RUN ["gem",  "install", "faraday-net_http",  "-v",  "3.0.2"]
-RUN ["gem",  "install", "faraday",  "-v",  "2.8.1"]
-RUN ["gem",  "install", "excon",  "-v",  "1.2.5"]
-RUN ["gem", "install", "fluent-plugin-elasticsearch", "--no-document", "--version", "5.0.3"]
+RUN apt-get update
+    
+RUN apt-get install -y iproute2
 
-COPY ep_fluentd.sh /ep_fluentd.sh
+RUN gem update fluentd
 
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN ln -fs /usr/share/zoneinfo/Europe/Madrid /etc/localtime && \
+    echo "Europe/Madrid" > /etc/timezone && \
+    apt-get update && \
+    apt-get install -y tzdata && \
+    dpkg-reconfigure --frontend noninteractive tzdata
+
+COPY /ep_fluentd.sh /ep_fluentd.sh
 RUN chmod +x /ep_fluentd.sh

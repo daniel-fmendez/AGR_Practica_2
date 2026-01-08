@@ -1,0 +1,273 @@
+2026-01-07T00:02:15+01:00	fluent.info	{"pid":15,"ppid":9,"worker":0,"message":"starting fluentd worker pid=15 ppid=9 worker=0"}
+2026-01-07T00:02:15+01:00	fluent.info	{"message":"listening syslog socket on 0.0.0.0:5140 with tcp"}
+2026-01-07T00:02:15+01:00	fluent.info	{"port":24224,"bind":"0.0.0.0","message":"listening port port=24224 bind=\"0.0.0.0\""}
+2026-01-07T00:02:15+01:00	fluent.info	{"worker":0,"message":"fluentd worker is now running worker=0"}
+2026-01-07T00:02:14+01:00	rc1	{"log":" * Starting system logging syslog-ng","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1","source":"stdout"}
+2026-01-07T00:02:14+01:00	rc1	{"source":"stderr","log":"[2026-01-07T00:02:14.934919] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 3.35 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.27'","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1"}
+2026-01-07T00:02:15+01:00	rc1	{"container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1","source":"stderr","log":"[2026-01-07T00:02:15.067872] WARNING: The internal_queue_length stat counter has been renamed to internal_source.queued. The old name will be removed in future versions; config-version='3.27'"}
+2026-01-07T00:02:15+01:00	rc1	{"container_name":"/docker-rc1-1","source":"stdout","log":"   ...done.","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7"}
+2026-01-07T00:02:15+01:00	rc1	{"container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1","source":"stdout","log":" * Started watchfrr"}
+2026-01-07T00:02:15+01:00	rc1	{"container_name":"/docker-rc1-1","source":"stdout","log":"","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7"}
+2026-01-07T00:02:15+01:00	rc1	{"container_name":"/docker-rc1-1","source":"stdout","log":"Hello, this is FRRouting (version 8.1).","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7"}
+2026-01-07T00:02:15+01:00	rc1	{"log":"Copyright 1996-2005 Kunihiro Ishiguro, et al.","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	rc1	{"source":"stdout","log":"","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1"}
+2026-01-07T00:02:15+01:00	rc1	{"log":"rc1# conf t","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	rc1	{"container_name":"/docker-rc1-1","source":"stdout","log":"rc1(config)# log file /shared-volume/frr/frr3.log","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7"}
+2026-01-07T00:02:15+01:00	rc1	{"container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1","source":"stdout","log":"rc1(config)# router ospf"}
+2026-01-07T00:02:15+01:00	rc1	{"container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1","source":"stdout","log":"rc1(config-router)# network 10.1.0.0/29 area 0"}
+2026-01-07T00:02:15+01:00	rc1	{"log":"rc1(config-router)# network 10.100.0.0/24 area 0","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	rc1	{"container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7","container_name":"/docker-rc1-1","source":"stdout","log":"rc1(config-router)# end"}
+2026-01-07T00:02:15+01:00	rc1	{"container_name":"/docker-rc1-1","source":"stdout","log":"rc1# ","container_id":"3413efda44097d613e021bf703c9361643ca75fbd9e522d627668364cf13fcf7"}
+2026-01-07T00:02:14+01:00	ra	{"container_name":"/docker-ra-1","source":"stdout","log":" * Starting system logging syslog-ng","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769"}
+2026-01-07T00:02:15+01:00	ra	{"container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stderr","log":"[2026-01-07T00:02:15.001061] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 3.35 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.27'"}
+2026-01-07T00:02:15+01:00	ra	{"source":"stderr","log":"[2026-01-07T00:02:15.068127] WARNING: The internal_queue_length stat counter has been renamed to internal_source.queued. The old name will be removed in future versions; config-version='3.27'","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1"}
+2026-01-07T00:02:15+01:00	ra	{"log":"   ...done.","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	ra	{"log":" * Started watchfrr","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	ra	{"container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stdout","log":""}
+2026-01-07T00:02:15+01:00	ra	{"container_name":"/docker-ra-1","source":"stdout","log":"Hello, this is FRRouting (version 8.1).","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769"}
+2026-01-07T00:02:15+01:00	ra	{"source":"stdout","log":"Copyright 1996-2005 Kunihiro Ishiguro, et al.","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1"}
+2026-01-07T00:02:15+01:00	ra	{"container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stdout","log":""}
+2026-01-07T00:02:15+01:00	ra	{"container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stdout","log":"ra# conf t"}
+2026-01-07T00:02:15+01:00	ra	{"log":"ra(config)# log file /shared-volume/frr/frr1.log","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	ra	{"container_name":"/docker-ra-1","source":"stdout","log":"ra(config)# router ospf","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769"}
+2026-01-07T00:02:15+01:00	ra	{"container_name":"/docker-ra-1","source":"stdout","log":"ra(config-router)# network 10.2.0.0/29 area 0","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769"}
+2026-01-07T00:02:15+01:00	ra	{"container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stdout","log":"ra(config-router)# network 10.0.1.0/24 area 0"}
+2026-01-07T00:02:15+01:00	ra	{"container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stdout","log":"ra(config-router)# network 10.0.2.0/24 area 0"}
+2026-01-07T00:02:15+01:00	ra	{"container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769","container_name":"/docker-ra-1","source":"stdout","log":"ra(config-router)# end"}
+2026-01-07T00:02:15+01:00	ra	{"container_name":"/docker-ra-1","source":"stdout","log":"ra# ","container_id":"965408828bebf0dd6875e37b4515e6ed77bdb803742685422315314a68572769"}
+2026-01-07T00:02:15+01:00	rc2	{"container_name":"/docker-rc2-1","source":"stdout","log":" * Starting system logging syslog-ng","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3"}
+2026-01-07T00:02:15+01:00	rc2	{"source":"stderr","log":"[2026-01-07T00:02:15.084700] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 3.35 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.27'","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1"}
+2026-01-07T00:02:15+01:00	rc2	{"container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stderr","log":"[2026-01-07T00:02:15.118897] WARNING: The internal_queue_length stat counter has been renamed to internal_source.queued. The old name will be removed in future versions; config-version='3.27'"}
+2026-01-07T00:02:15+01:00	rc2	{"container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stdout","log":"   ...done."}
+2026-01-07T00:02:15+01:00	rc2	{"log":" * Started watchfrr","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	rc2	{"source":"stdout","log":"","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1"}
+2026-01-07T00:02:15+01:00	rc2	{"container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stdout","log":"Hello, this is FRRouting (version 8.1)."}
+2026-01-07T00:02:15+01:00	rc2	{"container_name":"/docker-rc2-1","source":"stdout","log":"Copyright 1996-2005 Kunihiro Ishiguro, et al.","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3"}
+2026-01-07T00:02:15+01:00	rc2	{"container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stdout","log":""}
+2026-01-07T00:02:15+01:00	rc2	{"log":"rc2# conf t","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	rc2	{"log":"rc2(config)# log file /shared-volume/frr/frr4.log","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	rc2	{"container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stdout","log":"rc2(config)# router ospf"}
+2026-01-07T00:02:15+01:00	rc2	{"source":"stdout","log":"rc2(config-router)# network 10.1.0.0/29 area 0","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1"}
+2026-01-07T00:02:15+01:00	rc2	{"container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stdout","log":"rc2(config-router)# network 10.2.0.0/29 area 0"}
+2026-01-07T00:02:15+01:00	rc2	{"container_name":"/docker-rc2-1","source":"stdout","log":"rc2(config-router)# network 10.3.0.0/29 area 0","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3"}
+2026-01-07T00:02:15+01:00	rc2	{"container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3","container_name":"/docker-rc2-1","source":"stdout","log":"rc2(config-router)# end"}
+2026-01-07T00:02:15+01:00	rc2	{"container_name":"/docker-rc2-1","source":"stdout","log":"rc2# ","container_id":"07189aaac5b6c549b0fd3936636e5a74592c6e9ebb40ebd074122deec725e6a3"}
+2026-01-07T00:02:15+01:00	rb	{"container_name":"/docker-rb-1","source":"stdout","log":" * Starting system logging syslog-ng","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b"}
+2026-01-07T00:02:15+01:00	rb	{"log":"[2026-01-07T00:02:15.099446] WARNING: Configuration file format is too old, syslog-ng is running in compatibility mode. Please update it to use the syslog-ng 3.35 format at your time of convenience. To upgrade the configuration, please review the warnings about incompatible changes printed by syslog-ng, and once completed change the @version header at the top of the configuration file; config-version='3.27'","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1","source":"stderr"}
+2026-01-07T00:02:15+01:00	rb	{"source":"stderr","log":"[2026-01-07T00:02:15.129131] WARNING: The internal_queue_length stat counter has been renamed to internal_source.queued. The old name will be removed in future versions; config-version='3.27'","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1"}
+2026-01-07T00:02:15+01:00	rb	{"container_name":"/docker-rb-1","source":"stdout","log":"   ...done.","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b"}
+2026-01-07T00:02:15+01:00	rb	{"container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1","source":"stdout","log":" * Started watchfrr"}
+2026-01-07T00:02:15+01:00	rb	{"container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1","source":"stdout","log":""}
+2026-01-07T00:02:15+01:00	rb	{"container_name":"/docker-rb-1","source":"stdout","log":"Hello, this is FRRouting (version 8.1).","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b"}
+2026-01-07T00:02:15+01:00	rb	{"source":"stdout","log":"Copyright 1996-2005 Kunihiro Ishiguro, et al.","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1"}
+2026-01-07T00:02:15+01:00	rb	{"container_name":"/docker-rb-1","source":"stdout","log":"","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b"}
+2026-01-07T00:02:15+01:00	rb	{"container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1","source":"stdout","log":"rb# conf t"}
+2026-01-07T00:02:15+01:00	rb	{"container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1","source":"stdout","log":"rb(config)# log file /shared-volume/frr/frr2.log"}
+2026-01-07T00:02:15+01:00	rb	{"source":"stdout","log":"rb(config)# router ospf","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1"}
+2026-01-07T00:02:15+01:00	rb	{"log":"rb(config-router)# network 10.3.0.0/29 area 0","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	rb	{"source":"stdout","log":"rb(config-router)# network 10.0.3.0/24 area 0","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1"}
+2026-01-07T00:02:15+01:00	rb	{"log":"rb(config-router)# network 10.0.4.0/24 area 0","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1","source":"stdout"}
+2026-01-07T00:02:15+01:00	rb	{"source":"stdout","log":"rb(config-router)# end","container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1"}
+2026-01-07T00:02:15+01:00	rb	{"container_id":"deee3e1d9c1e65cd90ea226e57d42dd34361c022e3817299dd8afc25a9b49e9b","container_name":"/docker-rb-1","source":"stdout","log":"rb# "}
+2026-01-07T00:02:15+01:00	server	{"container_name":"/docker-server-1","source":"stdout","log":"","container_id":"2bb2322672e33a0d41edb0b81be5da32e32fd4d7197447bda69ad5d70c4eb055"}
+2026-01-07T00:02:15+01:00	server	{"container_id":"2bb2322672e33a0d41edb0b81be5da32e32fd4d7197447bda69ad5d70c4eb055","container_name":"/docker-server-1","source":"stdout","log":"> my-test-server@1.0.0 start"}
+2026-01-07T00:02:15+01:00	server	{"container_name":"/docker-server-1","source":"stdout","log":"> node server.js","container_id":"2bb2322672e33a0d41edb0b81be5da32e32fd4d7197447bda69ad5d70c4eb055"}
+2026-01-07T00:02:15+01:00	server	{"container_id":"2bb2322672e33a0d41edb0b81be5da32e32fd4d7197447bda69ad5d70c4eb055","container_name":"/docker-server-1","source":"stdout","log":""}
+2026-01-07T00:02:15+01:00	server	{"container_name":"/docker-server-1","source":"stdout","log":"Server is listening at http://localhost:3000","container_id":"2bb2322672e33a0d41edb0b81be5da32e32fd4d7197447bda69ad5d70c4eb055"}
+2026-01-07T00:02:15+01:00	syslog.syslog.notice	{"host":"ra","ident":"syslog-ng","pid":"17","message":"syslog-ng starting up; version='3.35.1'"}
+2026-01-07T00:02:15+01:00	syslog.syslog.notice	{"host":"rc1","ident":"syslog-ng","pid":"17","message":"syslog-ng starting up; version='3.35.1'"}
+2026-01-07T00:02:15+01:00	syslog.syslog.err	{"host":"rc1","ident":"syslog-ng","pid":"17","message":"Syslog connection failed; fd='15', server='AF_INET(10.100.0.3:5140)', error='Connection refused (111)', time_reopen='60'"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-a582cfbd7a99: port 2(vethf0705a0) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-a582cfbd7a99: port 2(vethf0705a0) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"vethf0705a0: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"vethf0705a0: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"veth1271dda: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"veth1271dda: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-a582cfbd7a99: port 2(vethf0705a0) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-a582cfbd7a99: port 2(vethf0705a0) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[T83RR-8SM5G] watchfrr 8.1 starting: vty@0"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] zebra state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] bgpd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] ospfd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] staticd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[YFT0P-5Q5YX] Forked background command [pid 38]: /usr/lib/frr/watchfrr.sh restart all"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rc1","ident":"watchfrr.sh","pid":"48","message":"Cannot stop staticd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rc1","ident":"watchfrr.sh","pid":"54","message":"Cannot stop zebra: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rc1","ident":"watchfrr.sh","pid":"52","message":"Cannot stop bgpd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rc1","ident":"watchfrr.sh","pid":"50","message":"Cannot stop ospfd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"eth0: renamed from veth814cee6"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"eth0: renamed from vethead29ed"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"veth0c23dce: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"veth0c23dce: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"veth0a33530: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"veth0a33530: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"eth0: renamed from vetha67d839"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"eth0: renamed from vethd52397a"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc1","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc1","ident":"zebra","pid":"61","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc1","ident":"ospfd","pid":"73","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc1","ident":"bgpd","pid":"66","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc1","ident":"staticd","pid":"76","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] zebra state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] bgpd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] ospfd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] staticd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc1","ident":"watchfrr","pid":"37","message":"[KWE5Q-QNGFC] all daemons up, doing startup-complete notify"}
+2026-01-07T00:02:15+01:00	syslog.syslog.err	{"host":"ra","ident":"syslog-ng","pid":"17","message":"Syslog connection failed; fd='15', server='AF_INET(10.100.0.3:5140)', error='Connection refused (111)', time_reopen='60'"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-a582cfbd7a99: port 2(vethf0705a0) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-a582cfbd7a99: port 2(vethf0705a0) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"vethf0705a0: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"vethf0705a0: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"veth1271dda: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"veth1271dda: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-a582cfbd7a99: port 2(vethf0705a0) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-a582cfbd7a99: port 2(vethf0705a0) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"ra","ident":"watchfrr","pid":"37","message":"[T83RR-8SM5G] watchfrr 8.1 starting: vty@0"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"ra","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] zebra state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"ra","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] bgpd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"ra","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] ospfd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"ra","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] staticd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"ra","ident":"watchfrr","pid":"37","message":"[YFT0P-5Q5YX] Forked background command [pid 38]: /usr/lib/frr/watchfrr.sh restart all"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"ra","ident":"watchfrr.sh","pid":"53","message":"Cannot stop bgpd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"ra","ident":"watchfrr.sh","pid":"47","message":"Cannot stop staticd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"ra","ident":"watchfrr.sh","pid":"50","message":"Cannot stop ospfd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"ra","ident":"watchfrr.sh","pid":"54","message":"Cannot stop zebra: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"eth0: renamed from veth814cee6"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"eth0: renamed from vethead29ed"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"veth0c23dce: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"veth0c23dce: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"veth0a33530: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"veth0a33530: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"eth0: renamed from vetha67d839"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"eth0: renamed from vethd52397a"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"ra","ident":"zebra","pid":"56","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"ra","ident":"ospfd","pid":"68","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"ra","ident":"bgpd","pid":"61","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"ra","ident":"staticd","pid":"71","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"ra","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] zebra state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"ra","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] bgpd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"ra","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] ospfd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"ra","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] staticd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"ra","ident":"watchfrr","pid":"37","message":"[KWE5Q-QNGFC] all daemons up, doing startup-complete notify"}
+2026-01-07T00:02:55+01:00	syslog.daemon.info	{"host":"rc1","ident":"ospfd","pid":"73","message":"[S5PCG-77H23] Packet[DD]: Neighbor 10.3.0.3 Negotiation done (Master)."}
+2026-01-07T00:03:15+01:00	syslog.syslog.notice	{"host":"rc1","ident":"syslog-ng","pid":"17","message":"Syslog connection established; fd='18', server='AF_INET(10.100.0.3:5140)', local='AF_INET(0.0.0.0:0)'"}
+2026-01-07T00:03:15+01:00	syslog.syslog.notice	{"host":"ra","ident":"syslog-ng","pid":"17","message":"Syslog connection established; fd='17', server='AF_INET(10.100.0.3:5140)', local='AF_INET(0.0.0.0:0)'"}
+2026-01-07T00:02:15+01:00	syslog.syslog.notice	{"host":"rc2","ident":"syslog-ng","pid":"17","message":"syslog-ng starting up; version='3.35.1'"}
+2026-01-07T00:02:15+01:00	syslog.syslog.err	{"host":"rc2","ident":"syslog-ng","pid":"17","message":"Syslog connection failed; fd='15', server='AF_INET(10.100.0.3:5140)', error='Connection refused (111)', time_reopen='60'"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"eth0: renamed from veth814cee6"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[T83RR-8SM5G] watchfrr 8.1 starting: vty@0"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[ZCJ3S-SPH5S] zebra state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[ZCJ3S-SPH5S] bgpd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[ZCJ3S-SPH5S] ospfd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[ZCJ3S-SPH5S] staticd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[YFT0P-5Q5YX] Forked background command [pid 39]: /usr/lib/frr/watchfrr.sh restart all"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rc2","ident":"watchfrr.sh","pid":"48","message":"Cannot stop staticd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rc2","ident":"watchfrr.sh","pid":"51","message":"Cannot stop ospfd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rc2","ident":"watchfrr.sh","pid":"53","message":"Cannot stop bgpd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rc2","ident":"watchfrr.sh","pid":"55","message":"Cannot stop zebra: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"eth0: renamed from vethead29ed"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"veth0c23dce: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"veth0c23dce: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"veth0a33530: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"veth0a33530: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"eth0: renamed from vetha67d839"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"eth0: renamed from vethd52397a"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rc2","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc2","ident":"zebra","pid":"58","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc2","ident":"ospfd","pid":"70","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc2","ident":"bgpd","pid":"63","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rc2","ident":"staticd","pid":"73","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[QDG3Y-BY5TN] zebra state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[QDG3Y-BY5TN] bgpd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[QDG3Y-BY5TN] ospfd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[QDG3Y-BY5TN] staticd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rc2","ident":"watchfrr","pid":"38","message":"[KWE5Q-QNGFC] all daemons up, doing startup-complete notify"}
+2026-01-07T00:02:55+01:00	syslog.daemon.info	{"host":"rc2","ident":"ospfd","pid":"70","message":"[S5PCG-77H23] Packet[DD]: Neighbor 10.2.0.4 Negotiation done (Master)."}
+2026-01-07T00:03:15+01:00	syslog.syslog.notice	{"host":"rc2","ident":"syslog-ng","pid":"17","message":"Syslog connection established; fd='18', server='AF_INET(10.100.0.3:5140)', local='AF_INET(0.0.0.0:0)'"}
+2026-01-07T00:02:15+01:00	syslog.syslog.notice	{"host":"rb","ident":"syslog-ng","pid":"17","message":"syslog-ng starting up; version='3.35.1'"}
+2026-01-07T00:02:15+01:00	syslog.syslog.err	{"host":"rb","ident":"syslog-ng","pid":"17","message":"Syslog connection failed; fd='15', server='AF_INET(10.100.0.3:5140)', error='Connection refused (111)', time_reopen='60'"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"eth0: renamed from veth814cee6"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rb","ident":"watchfrr","pid":"37","message":"[T83RR-8SM5G] watchfrr 8.1 starting: vty@0"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rb","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] zebra state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rb","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] bgpd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rb","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] ospfd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rb","ident":"watchfrr","pid":"37","message":"[ZCJ3S-SPH5S] staticd state -> down : initial connection attempt failed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rb","ident":"watchfrr","pid":"37","message":"[YFT0P-5Q5YX] Forked background command [pid 38]: /usr/lib/frr/watchfrr.sh restart all"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"eth0: renamed from vethead29ed"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rb","ident":"watchfrr.sh","pid":"49","message":"Cannot stop staticd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rb","ident":"watchfrr.sh","pid":"51","message":"Cannot stop ospfd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rb","ident":"watchfrr.sh","pid":"52","message":"Cannot stop bgpd: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.daemon.err	{"host":"rb","ident":"watchfrr.sh","pid":"54","message":"Cannot stop zebra: pid file not found"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"veth0c23dce: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"veth0c23dce: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered disabled state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"veth0a33530: entered allmulticast mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"veth0a33530: entered promiscuous mode"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-185cf860236d: port 2(veth0c23dce) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"eth0: renamed from vetha67d839"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"eth0: renamed from vethd52397a"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered blocking state"}
+2026-01-07T00:02:15+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered forwarding state"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rb","ident":"zebra","pid":"56","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rb","ident":"ospfd","pid":"68","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rb","ident":"bgpd","pid":"61","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.info	{"host":"rb","ident":"staticd","pid":"71","message":"[VTVCM-Y2NW3] Configuration Read in Took: 00:00:00"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rb","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] zebra state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rb","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] bgpd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rb","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] ospfd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rb","ident":"watchfrr","pid":"37","message":"[QDG3Y-BY5TN] staticd state -> up : connect succeeded"}
+2026-01-07T00:02:15+01:00	syslog.daemon.notice	{"host":"rb","ident":"watchfrr","pid":"37","message":"[KWE5Q-QNGFC] all daemons up, doing startup-complete notify"}
+2026-01-07T00:03:00+01:00	syslog.daemon.info	{"host":"rb","ident":"ospfd","pid":"68","message":"[S5PCG-77H23] Packet[DD]: Neighbor 10.3.0.3 Negotiation done (Master)."}
+2026-01-07T00:03:15+01:00	syslog.syslog.notice	{"host":"rb","ident":"syslog-ng","pid":"17","message":"Syslog connection established; fd='18', server='AF_INET(10.100.0.3:5140)', local='AF_INET(0.0.0.0:0)'"}
+2026-01-07T01:05:40+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered disabled state"}
+2026-01-07T01:05:40+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"vethd52397a: renamed from eth0"}
+2026-01-07T01:05:40+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-c27c86fd65b4: port 2(veth0a33530) entered disabled state"}
+2026-01-07T01:05:40+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"vethd52397a: renamed from eth0"}
+2026-01-07T01:05:41+01:00	syslog.kern.info	{"host":"ra","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered disabled state"}
+2026-01-07T01:05:41+01:00	syslog.kern.info	{"host":"rb","ident":"kernel","message":"br-caf8f154f183: port 2(veth1271dda) entered disabled state"}
